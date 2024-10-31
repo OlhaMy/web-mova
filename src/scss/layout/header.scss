@@ -1,0 +1,10 @@
+.test {
+  color: $_bgSecond;
+  font-size: 64px;
+  font-family: $_secondFamily;
+}
+@include media(desktop) {
+  .test {
+    color: green;
+  }
+}
