@@ -1,6 +1,53 @@
 <header class="header">
-  <nav class="nav">
-    <ul class="nav-list"></ul>
-    <div class="container"><p class="test">test</p></div>
-  </nav>
+  <div class="container header-container">
+    <div class="header-menu">
+      <div class="header-logo">
+        <div class="header-logo-left">
+          <span class="header-logo-text">Forest</span>
+          <span class="header-logo-text">Rescue</span>
+        </div>
+        <p class="header-logo-right">2</p>
+      </div>
+      <nav class="header-nav">
+        <div class="header-nav-list-box">
+          <button
+            class="header-icon-button"
+            type="button"
+            aria-label="Close menu"
+          >
+            <svg class="header-icon-close" width="14" height="14">
+              <use href="./img/sprite.svg#icon-close"></use>
+            </svg>
+          </button>
+          <ul class="header-nav-list">
+            <li class="header-nav-item">
+              <a href="#home" class="header-nav-link">Home</a>
+            </li>
+            <li class="header-nav-item">
+              <a href="#description" class="header-nav-link">
+                Game Description
+              </a>
+            </li>
+            <li class="header-nav-item">
+              <a href="#features" class="header-nav-link">Unique Features</a>
+            </li>
+            <li class="header-nav-item">
+              <a href="#play" class="header-nav-link">How to Play</a>
+            </li>
+            <li class="header-nav-item">
+              <a href="#faq" class="header-nav-link">FAQ</a>
+            </li>
+            <li class="header-nav-item">
+              <a href="#gallery" class="header-nav-link">Gallery</a>
+            </li>
+          </ul>
+          <span class="underline"></span>
+        </div>
+      </nav>
+      <button class="header-burger" aria-label="Open menu">
+        <span class="header-burger-span"></span>
+      </button>
+    </div>
+  </div>
+  <div class="backdrop"></div>
 </header>
