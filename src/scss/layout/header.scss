@@ -204,6 +204,8 @@
     width: 0;
     background-color: #ffcf01;
     transition: $_transition;
+
+    transform: translateX(0);
   }
 
   .header-icon-button,
