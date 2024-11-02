@@ -1,0 +1,112 @@
+.home {
+  padding-top: 120px;
+  background-color: $_bgThird;
+}
+
+.home-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 32px;
+  position: relative;
+}
+
+.home-image {
+  z-index: 5;
+  position: relative;
+}
+
+.home-image-shadow {
+  width: 260px;
+  height: 340px;
+  border-radius: 50%;
+  background: #eec8ef;
+  filter: blur(45px);
+  position: absolute;
+  top: -20px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 4;
+}
+
+.home-info {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.home-title {
+  font-size: 24px;
+  color: $_black;
+}
+
+.home-button {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  align-self: center;
+  gap: 12px;
+  padding: 8px 16px;
+  border: none;
+  border-radius: 10px;
+  background: linear-gradient(270deg, #b519ba 0%, #520b54 80.11%);
+  transition: box-shadow $_transition;
+
+  &:hover {
+    box-shadow: -12px -12px 60px 0px rgba(134, 82, 136, 0.3),
+      12px 12px 60px 0px rgba(134, 82, 136, 0.4);
+  }
+
+  & .home-button-texts {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+
+    & .home-button-text {
+      color: $_white;
+      font-family: $_secondFamily;
+      font-size: 16px;
+    }
+
+    & .home-button-text-bold {
+      font-weight: 600;
+    }
+  }
+}
+
+@include media(desktop) {
+  .home {
+    padding-top: 160px;
+  }
+
+  .home-container {
+    flex-direction: row-reverse;
+    justify-content: space-between;
+  }
+
+  .home-image-box {
+    position: relative;
+  }
+
+  .home-image-shadow {
+    width: 390px;
+    height: 570px;
+    transform: rotate(12deg);
+    top: 0;
+    left: 0;
+  }
+
+  .home-info {
+    gap: 32px;
+  }
+
+  .home-title {
+    font-size: 64px;
+    max-width: 450px;
+  }
+
+  .home-button {
+    align-self: flex-start;
+  }
+}

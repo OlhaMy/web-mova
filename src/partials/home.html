@@ -1,0 +1,33 @@
+<section class="home" id="home">
+  <div class="container home-container">
+    <div class="home-image-box">
+      <picture>
+        <source media="(min-width: 1200px)" srcset="../img/home/phone_@1x.webp
+        1x, ../img/home/phone_@2x.webp 2x" type=image/webp> <source
+        media="(max-width: 1199px)" srcset="../img/home/phone_mob_@1x.webp 1x,
+        ../img/home/phone_mob_@2x.webp 2x" type=image/webp>
+        <img
+          class="home-image"
+          src="../img/home/phone_mob_@1x.webp"
+          alt="Phone game"
+          loading="lazy"
+        />
+      </picture>
+      <div class="home-image-shadow"></div>
+    </div>
+    <div class="home-info">
+      <h1 class="home-title">Start Great Game</h1>
+      <button class="home-button">
+        <svg class="home-button-icon" width="36" height="40">
+          <use href="./img/sprite.svg#icon-play"></use>
+        </svg>
+        <div class="home-button-texts">
+          <span class="home-button-text">Get in on</span>
+          <span class="home-button-text home-button-text-bold">
+            Google Play
+          </span>
+        </div>
+      </button>
+    </div>
+  </div>
+</section>
