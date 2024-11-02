@@ -3,7 +3,7 @@ import { activateLink } from './headerSmoothScroll.js';
 const header = document.querySelector('.header');
 let lastScroll = 0;
 const defaultOffset = 60;
-let isAutoScrolling = false;
+let isScrollingProgrammatically = false;
 
 const sections = document.querySelectorAll('section');
 const observerOptions = {
@@ -12,6 +12,8 @@ const observerOptions = {
 };
 
 function sectionObserverCallback(entries, observer) {
+  if (isScrollingProgrammatically) return;
+
   entries.forEach(entry => {
     if (entry.isIntersecting) {
       const targetId = entry.target.getAttribute('id');
@@ -28,7 +30,7 @@ const observer = new IntersectionObserver(
 sections.forEach(section => observer.observe(section));
 
 export function setIsAutoScrolling(value) {
-  isAutoScrolling = value;
+  isScrollingProgrammatically = value;
 }
 
 function scrollPosition() {
@@ -40,16 +42,16 @@ function containHide() {
 }
 
 window.addEventListener('scroll', () => {
-  if (!isAutoScrolling) {
-    if (
-      scrollPosition() > lastScroll &&
-      !containHide() &&
-      scrollPosition() > defaultOffset
-    ) {
-      header.classList.add('hide');
-    } else if (scrollPosition() < lastScroll && containHide()) {
-      header.classList.remove('hide');
-    }
+  if (isScrollingProgrammatically) return;
+
+  if (
+    scrollPosition() > lastScroll &&
+    !containHide() &&
+    scrollPosition() > defaultOffset
+  ) {
+    header.classList.add('hide');
+  } else if (scrollPosition() < lastScroll && containHide()) {
+    header.classList.remove('hide');
   }
   lastScroll = scrollPosition();
 });

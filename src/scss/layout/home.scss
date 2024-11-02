@@ -1,5 +1,6 @@
 .home {
   padding-top: 120px;
+  padding-bottom: 40px;
   background-color: $_bgThird;
 }
 
@@ -34,6 +35,7 @@
   display: flex;
   flex-direction: column;
   gap: 16px;
+  z-index: 5;
 }
 
 .home-title {
@@ -65,7 +67,7 @@
 
     & .home-button-text {
       color: $_white;
-      font-family: $_secondFamily;
+      font-family: $_fourthFamily;
       font-size: 16px;
     }
 
@@ -73,6 +75,56 @@
       font-weight: 600;
     }
   }
+}
+
+.home-piece {
+  position: absolute;
+  fill: transparent;
+}
+
+.home-piece-one {
+  stroke: #b519ba;
+  width: 80px;
+  height: 70px;
+  top: -20px;
+  left: 0;
+  transform: rotate(70deg);
+}
+
+.home-piece-two {
+  stroke: #ffcf01;
+  width: 100px;
+  height: 100px;
+  top: 250px;
+  right: -30px;
+  transform: rotate(160deg);
+}
+
+.home-piece-three {
+  stroke: #ff0101;
+  width: 50px;
+  height: 50px;
+  top: 10px;
+  right: 0;
+  transform: rotate(130deg);
+}
+
+.home-piece-four {
+  stroke: #b519ba;
+  width: 40px;
+  height: 34px;
+  top: 420px;
+  left: 30px;
+  transform: rotate(-30deg);
+}
+
+.home-piece-five {
+  stroke: #ff0101;
+  width: 50px;
+  height: 50px;
+  top: 180px;
+  left: 20px;
+  transform: rotate(130deg);
 }
 
 @include media(desktop) {
@@ -108,5 +160,124 @@
 
   .home-button {
     align-self: flex-start;
+  }
+
+  .home-piece {
+    opacity: 0;
+  }
+
+  .home-piece-one {
+    stroke: #b519ba;
+    width: 80px;
+    height: 70px;
+    top: 150px;
+    left: 350px;
+    transform: rotate(0deg);
+
+    --final-rotate: -40deg;
+    --final-top: 70px;
+    --final-left: 230px;
+    animation: growRotateAndFlipOne 1.5s ease forwards;
+  }
+
+  .home-piece-two {
+    stroke: #ffcf01;
+    width: 80px;
+    height: 70px;
+    top: 230px;
+    right: auto;
+    left: 450px;
+    transform: rotate(110deg);
+
+    --final-rotate: 60deg;
+    --final-top: 250px;
+    --final-left: 600px;
+    animation: growRotateAndFlipTwo 1.5s ease forwards;
+  }
+
+  .home-piece-three {
+    stroke: #ff0101;
+    width: 30px;
+    height: 30px;
+    top: 260px;
+    right: auto;
+    left: 390px;
+    transform: rotate(0deg);
+
+    --final-rotate: -40deg;
+    --final-top: 380px;
+    --final-left: 310px;
+    animation: growRotateAndFlipThree 1.5s ease forwards;
+  }
+
+  .home-piece-four {
+    display: none;
+  }
+
+  .home-piece-five {
+    display: none;
+  }
+}
+
+@keyframes growRotateAndFlipOne {
+  0% {
+    transform: scale(1) rotate(0deg);
+    top: calc(var(--final-top) + 50px);
+    left: calc(var(--final-left) + 50px);
+    opacity: 0;
+  }
+  50% {
+    transform: scale(2) rotate(180deg);
+    top: calc(var(--final-top) + 30px);
+    left: calc(var(--final-left) + 30px);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(4) rotate(var(--final-rotate));
+    top: var(--final-top);
+    left: var(--final-left);
+    opacity: 1;
+  }
+}
+
+@keyframes growRotateAndFlipTwo {
+  0% {
+    transform: scale(1) rotate(0deg);
+    top: calc(var(--final-top) - 20px);
+    left: calc(var(--final-left) - 150px);
+    opacity: 0;
+  }
+  50% {
+    transform: scale(2) rotate(180deg);
+    top: calc(var(--final-top) - 10px);
+    left: calc(var(--final-left) - 70px);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(4) rotate(var(--final-rotate));
+    top: var(--final-top);
+    left: var(--final-left);
+    opacity: 1;
+  }
+}
+
+@keyframes growRotateAndFlipThree {
+  0% {
+    transform: scale(1) rotate(0deg);
+    top: calc(var(--final-top) - 120px);
+    left: calc(var(--final-left) + 80px);
+    opacity: 0;
+  }
+  50% {
+    transform: scale(2) rotate(180deg);
+    top: calc(var(--final-top) - 60px);
+    left: calc(var(--final-left) + 40px);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(4) rotate(var(--final-rotate));
+    top: var(--final-top);
+    left: var(--final-left);
+    opacity: 1;
   }
 }
