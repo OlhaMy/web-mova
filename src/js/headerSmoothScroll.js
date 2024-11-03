@@ -20,7 +20,7 @@ export function activateLink(targetId) {
     link.classList.remove('active');
     if (link.getAttribute('href') === `#${targetId}`) {
       link.classList.add('active');
-      setUnderline(link);
+      requestAnimationFrame(() => setUnderline(link));
     }
   });
 }

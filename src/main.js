@@ -5,3 +5,4 @@ import './js/play';
 import './js/faq';
 import './js/gallery';
 import './js/footer';
+import './js/animations';

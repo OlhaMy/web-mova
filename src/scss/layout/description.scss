@@ -1,0 +1,178 @@
+.desc {
+  background: linear-gradient(to bottom, $_bgThird 95%, $_bgFirst 5%);
+}
+
+.desc-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.desc-toy-box {
+  position: relative;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  background-color: $_white;
+  min-height: 270px;
+  min-width: 296px;
+  border-radius: 10px;
+  margin-bottom: -10px;
+  align-self: center;
+  z-index: 5;
+  // transform: matrix3d(1, 0, 0, 0, 0, 1, 0, -0.0002, 0, 0, 1, 0, 0, 0, 0, 1);
+}
+
+.desc-cloud {
+  position: absolute;
+  filter: drop-shadow(4px 0px 4px rgba(0, 0, 0, 0.25));
+}
+
+.desc-cloud-one {
+  top: 5px;
+  left: 25px;
+  animation: cloudMove 4s ease-in-out infinite alternate;
+}
+
+.desc-cloud-two {
+  top: 10px;
+  right: 25px;
+  animation: cloudMove 4s ease-in-out infinite 2s alternate;
+}
+
+.desc-cloud-three {
+  top: 35px;
+  right: 70px;
+  animation: cloudMove 4s ease-in-out infinite 3s alternate;
+}
+
+.desc-image {
+  position: absolute;
+  bottom: 10px;
+  left: 15px;
+}
+
+.desc-button {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  gap: 4px;
+  padding: 8px 12px;
+  border: none;
+  border-radius: 15px;
+  background-color: $_bgSecond;
+  box-shadow: 0px 0px 4px 0px rgba(0, 0, 0, 0.25);
+  color: $_white;
+  font-size: 14px;
+  position: absolute;
+  top: 120px;
+  right: 20px;
+  transition: box-shadow $_transition;
+
+  &:hover {
+    box-shadow: -4px -4px 30px 0px rgba(134, 82, 136, 0.25),
+      4px 4px 30px 0px rgba(134, 82, 136, 0.25),
+      0px 0px 4px 0px rgba(0, 0, 0, 0.25);
+  }
+
+  & .desc-button-icon {
+    fill: $_white;
+  }
+}
+
+.desc-main-box {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  padding: 34px 12px 24px;
+  background-color: $_bgSecond;
+  box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.25) inset;
+  border-radius: 0 0 10px 10px;
+}
+
+.desc-title {
+  font-size: 24px;
+  color: $_white;
+}
+
+.desc-text {
+  font-family: $_secondFamily;
+  color: $_white;
+}
+
+@include media(desktop) {
+  .desc {
+    background: linear-gradient(to bottom, $_bgThird 50%, $_bgFirst 50%);
+  }
+
+  .desc-container {
+    flex-direction: row;
+    justify-content: center;
+  }
+
+  .desc-toy-box {
+    min-width: 430px;
+    min-height: 530px;
+    margin-bottom: 0;
+    border-radius: 10px 50px 50px 10px;
+    box-shadow: 4px 0px 4px rgba(0, 0, 0, 0.25);
+    transform: translateX(10px);
+  }
+
+  .desc-cloud-one {
+    width: 135px;
+    height: 65px;
+  }
+
+  .desc-cloud-two {
+    width: 100px;
+    height: 45px;
+    top: 20px;
+    right: 100px;
+  }
+
+  .desc-cloud-three {
+    width: 180px;
+    height: 55px;
+    top: 110px;
+    right: 20px;
+  }
+
+  .desc-image {
+    left: 5px;
+  }
+
+  .desc-button {
+    padding: 10px 20px;
+    font-size: 16px;
+    top: 60%;
+    right: 10px;
+
+    & .desc-button-icon {
+      width: 28px;
+      height: 28px;
+    }
+  }
+
+  .desc-main-box {
+    padding: 40px 40px 40px 50px;
+    gap: 32px;
+    max-width: 450px;
+    max-height: 450px;
+    border-radius: 0 40px 40px 0;
+    align-self: center;
+    transform: translateX(-10px);
+  }
+
+  .desc-title {
+    font-size: 32px;
+  }
+}
+
+@keyframes cloudMove {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(20px);
+  }
+}
