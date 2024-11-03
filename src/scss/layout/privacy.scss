@@ -11,6 +11,14 @@
 
   padding-top: 60px;
   padding-bottom: 40px;
+
+  transform: $_transition;
+}
+.back-link:hover {
+  color: $_bgFirst;
+}
+.back-link:focus {
+  color: $_bgSecond;
 }
 
 .first-title {

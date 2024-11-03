@@ -12,7 +12,12 @@
   padding-top: 60px;
   padding-bottom: 40px;
 }
-
+.back-link:hover {
+  color: $_bgFirst;
+}
+.back-link:focus {
+  color: $_bgSecond;
+}
 .first-title-terms {
   color: $_black;
   text-align: center;
