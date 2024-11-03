@@ -1,0 +1,60 @@
+.gallery .container {
+  padding-top: 40px;
+  padding-bottom: 40px;
+
+  overflow: hidden;
+  position: relative;
+}
+
+.gallery-title {
+  color: $_black;
+  text-align: center;
+  font-size: 24px;
+  margin-bottom: 48px;
+}
+
+.swiper-container {
+}
+.swiper-wrapper {
+}
+
+.swiper-slide img {
+  // width: 140px;
+  // height: 226px;
+  border-radius: 9px;
+}
+
+.swiper-button-prev,
+.swiper-button-next {
+  display: none;
+}
+.swiper-button-prev:after,
+.swiper-button-next:after {
+  content: none;
+}
+@include media(desktop) {
+  .swiper-container {
+    display: flex;
+    height: 580px;
+    gap: 16px;
+  }
+
+  .swiper-button-prev,
+  .swiper-button-next {
+    display: flex;
+    width: 70px;
+    height: 70px;
+    background-color: $_bgSecond;
+    border-radius: 50%;
+    padding: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .swiper-button-prev svg,
+  .swiper-button-next svg {
+    fill: $_bgThird;
+    stroke: transparent;
+  }
+}

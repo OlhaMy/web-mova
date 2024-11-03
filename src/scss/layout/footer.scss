@@ -32,6 +32,16 @@
   display: flex;
 }
 
+.footer-link.page {
+  transform: $_transition;
+}
+.footer-link.page:hover {
+  color: #ffcf01;
+}
+.footer-link.page:focus {
+  color: #bc9b0c;
+}
+
 @include media(desktop) {
   .footer .container {
     padding-top: 32px;
