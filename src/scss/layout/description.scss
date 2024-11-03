@@ -28,16 +28,19 @@
 .desc-cloud-one {
   top: 5px;
   left: 25px;
+  animation: cloudMove 4s ease-in-out infinite alternate;
 }
 
 .desc-cloud-two {
   top: 10px;
   right: 25px;
+  animation: cloudMove 4s ease-in-out infinite 2s alternate;
 }
 
 .desc-cloud-three {
   top: 35px;
   right: 70px;
+  animation: cloudMove 4s ease-in-out infinite 3s alternate;
 }
 
 .desc-image {
@@ -162,5 +165,14 @@
 
   .desc-title {
     font-size: 32px;
+  }
+}
+
+@keyframes cloudMove {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(20px);
   }
 }
