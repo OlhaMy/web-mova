@@ -140,6 +140,11 @@
     background-color: #c7c7c7 !important;
   }
 
+  .swiper-button-disabled:hover,
+  .swiper-button-disabled:focus {
+    box-shadow: none;
+  }
+
   .gallery-button-prev::after,
   .gallery-button-next::after {
     content: none !important;
