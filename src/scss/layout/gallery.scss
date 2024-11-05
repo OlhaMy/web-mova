@@ -129,10 +129,8 @@
   }
 
   .gallery-button-prev:hover,
-  .gallery-button-next:hover,
-  .gallery-button-prev:focus,
-  .gallery-button-next:focus {
-    background-color: #c7c7c7;
+  .gallery-button-next:hover {
+    background-color: #c7c7c7 !important;
   }
 
   .gallery-button-prev::after,
