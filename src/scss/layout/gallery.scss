@@ -2,8 +2,12 @@
   padding-top: 40px;
   padding-bottom: 40px;
 
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+
   overflow: hidden;
-  position: relative;
 }
 
 .gallery-title {
@@ -14,47 +18,88 @@
 }
 
 .swiper-container {
+  width: 100%;
 }
 .swiper-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-.swiper-slide img {
-  // width: 140px;
-  // height: 226px;
+.swiper-slide {
+  width: 140px;
+  height: 100%;
+  // aspect-ratio: 3/4;
   border-radius: 9px;
+  // margin: 0 8px;
+}
+.swiper-slide img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  border-radius: inherit;
+  object-fit: cover;
+  user-select: none;
 }
 
+.swiper-pagination {
+  --swiper-pagination-bottom: -18px;
+}
+.swiper-pagination-bullet {
+  width: 8px !important;
+  height: 8px !important;
+  border-radius: 8px !important;
+  background-color: rgba(163, 90, 166, 0.3) !important;
+  transition: $_transition !important;
+}
+
+.swiper-pagination-bullet-active {
+  width: 12px !important;
+  height: 12px !important;
+  background-color: $_bgSecond !important;
+}
 .swiper-button-prev,
 .swiper-button-next {
-  display: none;
+  display: none !important;
 }
-.swiper-button-prev:after,
-.swiper-button-next:after {
-  content: none;
-}
-@include media(desktop) {
-  .swiper-container {
-    display: flex;
-    height: 580px;
-    gap: 16px;
-  }
 
+@include media(desktop) {
   .swiper-button-prev,
   .swiper-button-next {
-    display: flex;
-    width: 70px;
-    height: 70px;
-    background-color: $_bgSecond;
-    border-radius: 50%;
+    background-color: $_bgSecond !important;
+    border-radius: 50% !important;
+    width: 70px !important;
+    height: 70px !important;
     padding: 15px;
-    display: flex;
+    display: flex !important;
     justify-content: center;
     align-items: center;
+
+    transition: $_transition;
+  }
+
+  .swiper-button-prev:hover,
+  .swiper-button-next:hover,
+  .swiper-button-prev:focus,
+  .swiper-button-next:focus {
+    background-color: #c7c7c7;
+  }
+
+  .swiper-button-prev::after,
+  .swiper-button-next::after {
+    content: none !important;
   }
 
   .swiper-button-prev svg,
   .swiper-button-next svg {
     fill: $_bgThird;
-    stroke: transparent;
+    background-color: transparent;
+    width: 100%;
+    height: 100%;
   }
+}
+
+.swiper-button-prev:after,
+.swiper-button-next:after {
+  content: none;
 }
