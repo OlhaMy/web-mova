@@ -1,11 +1,6 @@
 import Swiper from 'swiper/bundle';
 import 'swiper/css/bundle';
 
-import 'swiper/scss';
-import 'swiper/scss/navigation';
-import 'swiper/scss/pagination';
-import 'swiper/scss/effect-coverflow';
-
 const swiper = new Swiper('.swiper-container', {
   effect: 'coverflow',
   grabCursor: true,
