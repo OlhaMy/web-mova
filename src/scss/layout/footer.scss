@@ -33,7 +33,7 @@
 }
 
 .footer-link.page {
-  transform: $_transition;
+  transition: color $_transition;
 }
 .footer-link.page:hover {
   color: #ffcf01;
