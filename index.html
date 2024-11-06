@@ -14,7 +14,7 @@
     <script type="module" crossorigin src="/Forest-Rescue-2/commonHelpers.js"></script>
     <link rel="modulepreload" crossorigin href="/Forest-Rescue-2/assets/vendor-7d212bb0.js">
     <link rel="stylesheet" href="/Forest-Rescue-2/assets/vendor-fef9b9da.css">
-    <link rel="stylesheet" href="/Forest-Rescue-2/assets/styles-104a0ab7.css">
+    <link rel="stylesheet" href="/Forest-Rescue-2/assets/styles-deca4808.css">
   </head>
   <body>
     <header class="header">
@@ -82,7 +82,6 @@
           class="home-image"
           src="/Forest-Rescue-2/assets/phone_mob_@1x-5301ee3b.webp"
           alt="Phone game"
-          loading="lazy"
         />
       </picture>
       <div class="home-image-shadow"></div>
@@ -94,7 +93,6 @@
         href="https://play.google.com/store/apps/details?id=air.com.qublix.forestrescuetwo"
         target="_blank"
         referrerpolicy="no-referrer"
-        type="button"
         aria-label="Go to google play market"
       >
         <svg class="home-button-icon" width="36" height="40">
@@ -154,7 +152,6 @@
         href="https://play.google.com/store/apps/details?id=air.com.qublix.forestrescuetwo"
         target="_blank"
         referrerpolicy="no-referrer"
-        type="button"
         aria-label="Go to google play market"
       >
         Play Now
@@ -302,7 +299,11 @@
       <li class="faq-item">
         <div class="faq-question">
           <p class="faq-text">Can I play Start Great Game offline?</p>
-          <button class="faq-btn" type="button">
+          <button
+            class="faq-btn"
+            type="button"
+            aria-label="Open the answer to the question"
+          >
             <svg class="faq-icon" width="20" height="20">
               <use href="/Forest-Rescue-2/assets/sprite-e45c269c.svg#icon-arrow-up"></use>
             </svg>
@@ -319,7 +320,11 @@
       <li class="faq-item">
         <div class="faq-question">
           <p class="faq-text">Is Start Great Game suitable for all ages?</p>
-          <button class="faq-btn" type="button">
+          <button
+            class="faq-btn"
+            type="button"
+            aria-label="Open the answer to the question"
+          >
             <svg class="faq-icon" width="20" height="20">
               <use href="/Forest-Rescue-2/assets/sprite-e45c269c.svg#icon-arrow-up"></use>
             </svg>
@@ -338,7 +343,11 @@
           <p class="faq-text">
             Are there in-app purchases in Start Great Game?
           </p>
-          <button class="faq-btn" type="button">
+          <button
+            class="faq-btn"
+            type="button"
+            aria-label="Open the answer to the question"
+          >
             <svg class="faq-icon" width="20" height="20">
               <use href="/Forest-Rescue-2/assets/sprite-e45c269c.svg#icon-arrow-up"></use>
             </svg>
@@ -355,7 +364,11 @@
       <li class="faq-item">
         <div class="faq-question">
           <p class="faq-text">How do I unlock more levels?</p>
-          <button class="faq-btn" type="button">
+          <button
+            class="faq-btn"
+            type="button"
+            aria-label="Open the answer to the question"
+          >
             <svg class="faq-icon" width="20" height="20">
               <use href="/Forest-Rescue-2/assets/sprite-e45c269c.svg#icon-arrow-up"></use>
             </svg>
@@ -374,7 +387,11 @@
           <p class="faq-text">
             Can I compete with friends in Start Great Game?
           </p>
-          <button class="faq-btn" type="button">
+          <button
+            class="faq-btn"
+            type="button"
+            aria-label="Open the answer to the question"
+          >
             <svg class="faq-icon" width="20" height="20">
               <use href="/Forest-Rescue-2/assets/sprite-e45c269c.svg#icon-arrow-up"></use>
             </svg>
@@ -390,7 +407,11 @@
       <li class="faq-item">
         <div class="faq-question">
           <p class="faq-text">What should I do if I'm stuck on a level?</p>
-          <button class="faq-btn" type="button">
+          <button
+            class="faq-btn"
+            type="button"
+            aria-label="Open the answer to the question"
+          >
             <svg class="faq-icon" width="20" height="20">
               <use href="/Forest-Rescue-2/assets/sprite-e45c269c.svg#icon-arrow-up"></use>
             </svg>
@@ -406,7 +427,11 @@
       <li class="faq-item">
         <div class="faq-question">
           <p class="faq-text">How often is new content added to the game?</p>
-          <button class="faq-btn" type="button">
+          <button
+            class="faq-btn"
+            type="button"
+            aria-label="Open the answer to the question"
+          >
             <svg class="faq-icon" width="20" height="20">
               <use href="/Forest-Rescue-2/assets/sprite-e45c269c.svg#icon-arrow-up"></use>
             </svg>
@@ -424,7 +449,11 @@
           <p class="faq-text">
             Who do I contact for support if I have an issue?
           </p>
-          <button class="faq-btn" type="button">
+          <button
+            class="faq-btn"
+            type="button"
+            aria-label="Open the answer to the question"
+          >
             <svg class="faq-icon" width="20" height="20">
               <use href="/Forest-Rescue-2/assets/sprite-e45c269c.svg#icon-arrow-up"></use>
             </svg>
@@ -474,14 +503,22 @@
         <div class="swiper-pagination"></div>
       </div>
       <div class="gallery-button-prev">
-        <button type="button" class="gallery-button">
+        <button
+          type="button"
+          class="gallery-button"
+          aria-label="Go to previous slide"
+        >
           <svg width="40" height="40">
             <use href="/Forest-Rescue-2/assets/sprite-e45c269c.svg#icon-swiper-btn-left"></use>
           </svg>
         </button>
       </div>
       <div class="gallery-button-next">
-        <button type="button" class="gallery-button">
+        <button
+          type="button"
+          class="gallery-button"
+          aria-label="Go to next slide"
+        >
           <svg width="40" height="40">
             <use href="/Forest-Rescue-2/assets/sprite-e45c269c.svg#icon-swiper-btn-right"></use>
           </svg>
