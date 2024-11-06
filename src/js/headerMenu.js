@@ -6,13 +6,13 @@ const refs = {
 };
 
 export function openMobileMenu() {
-  document.body.classList.add('body-prevent-scroll');
+  document.documentElement.classList.add('body-prevent-scroll');
   refs.backdrop.classList.add('backdrop-open');
   refs.headerNav.classList.add('header-nav-open');
 }
 
 export function closeMobileMenu() {
-  document.body.classList.remove('body-prevent-scroll');
+  document.documentElement.classList.remove('body-prevent-scroll');
   refs.backdrop.classList.remove('backdrop-open');
   refs.headerNav.classList.remove('header-nav-open');
 }
