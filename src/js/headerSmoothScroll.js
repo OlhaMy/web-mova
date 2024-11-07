@@ -36,8 +36,11 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     e.preventDefault();
     const targetElement = document.querySelector(this.getAttribute('href'));
     if (targetElement) {
+      const headerHeight = document.querySelector('.header').offsetHeight;
       const targetPosition =
-        targetElement.getBoundingClientRect().top + window.pageYOffset;
+        targetElement.getBoundingClientRect().top +
+        window.pageYOffset -
+        headerHeight;
       const startPosition = window.pageYOffset;
       const distance = targetPosition - startPosition;
       const duration = 500;
