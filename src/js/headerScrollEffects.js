@@ -42,16 +42,7 @@ function containHide() {
 }
 
 window.addEventListener('scroll', () => {
-  if (isScrollingProgrammatically) return;
-
-  if (
-    scrollPosition() > lastScroll &&
-    !containHide() &&
-    scrollPosition() > defaultOffset
-  ) {
-    header.classList.add('hide');
-  } else if (scrollPosition() < lastScroll && containHide()) {
-    header.classList.remove('hide');
+  if (!isScrollingProgrammatically) {
+    lastScroll = scrollPosition();
   }
-  lastScroll = scrollPosition();
 });
