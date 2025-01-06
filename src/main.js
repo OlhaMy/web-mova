@@ -1,8 +1,9 @@
 import './js/header';
-import './js/home';
-import './js/features';
-import './js/play';
-import './js/faq';
-import './js/gallery';
+import './js/hero';
+import './js/about';
+import './js/advantages';
+import './js/services';
+import './js/steps';
+import './js/advice';
+import './js/contact';
 import './js/footer';
-import './js/animations';
