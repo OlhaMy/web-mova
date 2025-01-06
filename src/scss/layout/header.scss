@@ -1,1 +1,85 @@
+.header {
+  background-color: $_dark;
+}
+.header-container {
+  padding-top: 12px;
+  padding-bottom: 18px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 100%;
+}
 
+.icon-menu {
+  fill: $_lite;
+  width: 44px;
+  height: 44px;
+}
+
+.lang-button {
+  position: relative;
+  display: inline-block;
+  font-size: 18px;
+  background-color: transparent;
+}
+
+.dropdown-toggle {
+  background-color: transparent;
+  color: $_lite;
+  padding: 9px 4px;
+  font-size: 18px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 4px;
+}
+
+.dropdown-toggle .arrow {
+  fill: transparent;
+  transition: transform 0.3s ease;
+}
+.icon-arow {
+  fill: $_lite;
+  width: 16px;
+  height: 16px;
+}
+
+/* Меню випадаючого списку */
+.dropdown-menu {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+
+  border-radius: 4px;
+  margin-top: 5px;
+  overflow: hidden;
+  z-index: 10;
+  min-width: 100%;
+}
+
+/* Кнопки всередині меню */
+.dropdown-menu button {
+  display: block;
+  width: 100%;
+  padding: 9px 4px;
+  background-color: transparent;
+  color: $_lite;
+  border: none;
+  text-align: left;
+
+  font-size: 18px;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.dropdown-menu button.active {
+  color: $_primary;
+}
+
+.lang-button.active .dropdown-menu {
+  display: block;
+}
+
+.lang-button.active .dropdown-toggle .arrow {
+  transform: rotate(180deg);
+}
