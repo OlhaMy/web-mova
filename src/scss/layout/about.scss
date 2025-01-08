@@ -1,0 +1,146 @@
+.about {
+  background-color: $_lite;
+}
+
+.about-container {
+  padding-top: 60px;
+  padding-bottom: 60px;
+
+  display: flex;
+  flex-direction: column;
+}
+.text-section-mob {
+  color: $_primary-for-lite;
+  font-family: $_secondFamily;
+  font-size: 18px;
+  font-weight: 500;
+
+  margin-bottom: 36px;
+}
+.about-img {
+  width: 358px;
+  margin-bottom: 36px;
+}
+.about-title-box {
+  display: flex;
+  flex-direction: column;
+}
+
+.text-section-desc {
+  display: none;
+}
+.about-title {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 28px;
+
+  color: $_dark;
+  font-family: $_secondFamily;
+  font-size: 36px;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+.about-text {
+  margin-bottom: 36px;
+
+  color: $_dark;
+  font-family: $_fontFamily;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.5;
+}
+.about-btn {
+  display: inline-block;
+  align-self: center;
+  padding: 16px 32px;
+  justify-content: center;
+  align-items: center;
+  background-color: $_primary;
+  border: none;
+
+  color: $_dark;
+  font-family: $_fontFamily;
+  text-align: center;
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.about-list {
+  display: flex;
+}
+.about-item {
+}
+.star-icon {
+}
+.item-icon {
+}
+
+@include media(desktop) {
+  .about-container {
+    padding-top: 60px;
+    padding-bottom: 60px;
+
+    display: flex;
+    flex-direction: column;
+  }
+  .text-section-mob {
+    color: $_primary-for-lite;
+    font-family: $_secondFamily;
+    font-size: 18px;
+    font-weight: 500;
+
+    margin-bottom: 36px;
+  }
+  .about-img {
+    width: 358px;
+    margin-bottom: 36px;
+  }
+  .about-title-box {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .text-section-desc {
+    display: none;
+  }
+  .about-title {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 28px;
+
+    color: $_dark;
+    font-family: $_secondFamily;
+    font-size: 36px;
+    font-weight: 600;
+    text-transform: uppercase;
+  }
+  .about-text-box {
+    // display: flex;
+    // flex-direction: column;
+  }
+  .about-text {
+    margin-bottom: 36px;
+
+    color: $_dark;
+    font-family: $_fontFamily;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 1.5;
+  }
+  .about-btn {
+    display: inline-block;
+    align-self: center;
+    padding: 16px 32px;
+    justify-content: center;
+    align-items: center;
+    background-color: $_primary;
+    border: none;
+
+    color: $_dark;
+    font-family: $_fontFamily;
+    text-align: center;
+    font-size: 18px;
+    font-weight: 600;
+  }
+}
